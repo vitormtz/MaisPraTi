@@ -1,11 +1,11 @@
 
 # MaisPraTi
 
-Este repositório contém uma série de exercícios práticos organizados em listas. Siga as instruções abaixo para configurar o ambiente local e executar os exercícios.
+Este repositório contém uma série de exercícios práticos. Siga as instruções abaixo para configurar o ambiente local e executar os exercícios.
 
 ## Pré-requisitos
 
-- [Node.js](https://nodejs.org/en/) instalado (versão 14 ou superior)
+- [Node.js](https://nodejs.org/en/) instalado
 - [Git](https://git-scm.com/) instalado
 
 ## Instruções para configurar o projeto
@@ -63,7 +63,3 @@ Cada pasta de exercícios pode ser executada individualmente. Siga as instruçõ
    ```
 
    Substitua `nome_do_exercicio.js` pelo nome do arquivo que você deseja executar.
-
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
