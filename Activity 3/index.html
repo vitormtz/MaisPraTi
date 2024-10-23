@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barulinho Bom</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      header {
+        background-color: #000000;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        color: #1db954;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 1rem;
+        text-align: center;
+      }
+
+      nav a {
+        color: #b3b3b3;
+        text-decoration: none;
+        margin: 0 1rem;
+        padding: 0.5rem;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #ffffff;
+      }
+
+      main {
+        display: flex;
+        padding-top: 80px;
+        min-height: calc(100vh - 80px);
+      }
+
+      section {
+        width: 70%;
+        padding: 2rem;
+        background-color: #121212;
+      }
+
+      .featured-playlist {
+        background: linear-gradient(to bottom, #282828, #121212);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+      }
+
+      .playlist-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .playlist-card {
+        background-color: #181818;
+        padding: 1rem;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+      }
+
+      .playlist-card:hover {
+        background-color: #282828;
+        cursor: pointer;
+      }
+
+      .playlist-card img {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+
+      .playlist-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .playlist-card p {
+        color: #b3b3b3;
+        font-size: 0.9rem;
+      }
+
+      section h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+      }
+
+      section p {
+        color: #b3b3b3;
+        margin: 1rem 0;
+      }
+
+      aside {
+        width: 30%;
+        padding: 2rem;
+        background-color: #000000;
+      }
+
+      aside h3 {
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      aside ul {
+        list-style: none;
+      }
+
+      aside ul li {
+        margin: 1rem 0;
+      }
+
+      aside a {
+        color: #b3b3b3;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      aside a:hover {
+        color: #ffffff;
+      }
+
+      .activity-item {
+        background-color: #181818;
+        padding: 1rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        background-color: #181818;
+        color: #b3b3b3;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #282828;
+      }
+
+      .gradient-background {
+        background: linear-gradient(to bottom, #1db954, #121212);
+        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Barulinho Bom</h1>
+      <nav>
+        <a href="#home">Início</a>
+        <a href="#buscar">Buscar</a>
+        <a href="#biblioteca">Sua Biblioteca</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="featured-playlist">
+          <h2>Continue ouvindo de onde parou</h2>
+          <div class="playlist-grid">
+            <div class="playlist-card">
+              <img
+                src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60"
+                alt="Playlist de Rock"
+              />
+              <h3>Rock Classics</h3>
+              <p>As melhores do rock</p>
+            </div>
+            <div class="playlist-card">
+              <img
+                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=60"
+                alt="Playlist de Pop"
+              />
+              <h3>Pop Hits 2024</h3>
+              <p>Top hits do momento</p>
+            </div>
+            <div class="playlist-card">
+              <img
+                src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=500&auto=format&fit=crop&q=60"
+                alt="Playlist de Jazz"
+              />
+              <h3>Jazz Lounge</h3>
+              <p>Relaxe com jazz</p>
+            </div>
+          </div>
+
+          <h2 style="margin-top: 2rem">Feito para você</h2>
+          <div class="playlist-grid">
+            <div class="playlist-card">
+              <img
+                src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&auto=format&fit=crop&q=60"
+                alt="Mix Diário"
+              />
+              <h3>Seu Mix Diário</h3>
+              <p>Atualizado diariamente</p>
+            </div>
+            <div class="playlist-card">
+              <img
+                src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&auto=format&fit=crop&q=60"
+                alt="Descobertas"
+              />
+              <h3>Descobertas da Semana</h3>
+              <p>Novos artistas para você</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <h3>Atividade dos amigos</h3>
+        <div class="activity-item">
+          <p>João está ouvindo</p>
+          <strong>Bohemian Rhapsody - Queen</strong>
+        </div>
+        <div class="activity-item">
+          <p>Maria está ouvindo</p>
+          <strong>Shape of You - Ed Sheeran</strong>
+        </div>
+
+        <h3 style="margin-top: 2rem">Suas playlists</h3>
+        <ul>
+          <li><a href="#favoritas">Músicas Curtidas</a></li>
+          <li><a href="#top2023">Seu Top 2023</a></li>
+          <li><a href="#descobertas">Radar de Novidades</a></li>
+          <li><a href="#podcasts">Podcasts Salvos</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Barulinho Bom. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
