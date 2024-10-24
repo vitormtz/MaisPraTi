@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Página principal</title>
+
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Web Developer, HTML, CSS, JavaScript" />
+    <meta name="author" content="Vitor Brackmann" />
+    <meta
+      name="description"
+      content="Este site trata de conteúdos introdutórios do desencolvimento Web"
+    />
+
+    <style>
+      a {
+        font-weight: bold;
+        color: brown;
+        border: 2px solid;
+      }
+      a:hover {
+        color: blue;
+        text-decoration: none;
+        background-color: grey;
+      }
+
+      a:link {
+        color: aqua;
+      }
+
+      a:visited {
+        color: blueviolet;
+      }
+
+      a:active {
+        color: black;
+      }
+
+      p {
+        background-color: black;
+        color: white;
+        text-align: justify;
+        letter-spacing: normal;
+        word-spacing: 20px;
+        text-transform: uppercase;
+      }
+
+      ul {
+        list-style: none;
+        border: 1px solid;
+        margin: 50px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      ol {
+        list-style: upper-latin;
+        border: 1px solid black;
+        padding-top: 10px;
+      }
+
+      table {
+        border: 2px solid;
+        width: 100%;
+        text-align: center;
+      }
+
+      th,
+      td {
+        border: 1px solid orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="https://www.google.com">Página principal</a>
+      <a href="exemplo.html">Arquivo HTML</a>
+    </nav>
+    <hr />
+    <header>
+      <h1>Bem-vindo ao nosso site</h1>
+      <h2 style="color: blue">Bem-vindo ao nosso site</h2>
+      <h3>Bem-vindo ao nosso site</h3>
+    </header>
+
+    <hr />
+
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quod
+        culpa sed temporibus nostrum illum doloremque dolore illo, aut suscipit
+        fugiat magnam officia quos, enim et incidunt aperiam facilis ab.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quod
+        culpa sed temporibus nostrum illum doloremque dolore illo, aut suscipit
+        fugiat magnam officia quos, enim et incidunt aperiam facilis ab.
+      </p>
+      <p>Fórmula Química: H<sub>2</sub>O Expoente: X<sup>2</sup></p>
+    </section>
+
+    <hr />
+
+    <section>
+      <p>
+        Uma <abbr title="Aplication Programming Interface">API</abbr> permite
+        que diferentes softwares se comuninquem
+      </p>
+
+      <blockquote cite="https://google.com">
+        O google é um navegador de desktop com excelente performace
+      </blockquote>
+
+      <p><cite>The Starry Night</cite> por Vincent Van Gogh. Pintada em 1889</p>
+
+      <p>
+        A famosa citação da peça Hamlet de Shakespeare - <q>Ser ou não ser</q>
+      </p>
+
+      <p>Este texto tem <strong>ênfase</strong> na palavra ênfase</p>
+
+      <p>Este texto tem <em>emphasis</em> na palavra ênfase</p>
+
+      <p>Este texto tem uma palavra destacado <u>underline</u></p>
+
+      <p>Este texto tem uma palavra <s>incorreta</s></p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3>Navegação do site</h3>
+
+      <ul type="">
+        <li>Home</li>
+        <li>Sobre nós</li>
+        <li>NewsLetter</li>
+      </ul>
+
+      <h2>FAQ</h2>
+
+      <ol>
+        <li>O que é HTML?</li>
+        <li>Como o CSS funciona?</li>
+        <li>Para que serve o JS?</li>
+      </ol>
+    </section>
+
+    <hr />
+
+    <section>
+      <table>
+        <tr>
+          <th>Produto</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+        </tr>
+        <tr>
+          <td>Notebook</td>
+          <td>Notebook Gamer com uma RTX 4070</td>
+          <td>R$ 1.000,00</td>
+        </tr>
+        <tr>
+          <td>Playstation</td>
+          <td>Console super divertido da Sony</td>
+          <td>R$ 1.200,00</td>
+        </tr>
+        <tr>
+          <td>Bicicleta</td>
+          <td>Caloi 10 fantástica</td>
+          <td>R$ 300,00</td>
+        </tr>
+        <tr>
+          <td colspan="3">Total: R$ 2.500,00</td>
+        </tr>
+      </table>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Login</h2>
+      <form>
+        <label for="nomeUsuario">Nome de Usuário</label>
+        <input type="text" />
+
+        <br /><br />
+
+        <label for="senha">Senha:</label>
+        <input type="password" />
+      </form>
+    </section>
+
+    <hr />
+
+    <footer>
+      <h2>Rodapé da página</h2>
+
+      &lt;Aprendendo HTML&gt;
+      <p>Desenvolvido por Vitor</p>
+    </footer>
+  </body>
+</html>

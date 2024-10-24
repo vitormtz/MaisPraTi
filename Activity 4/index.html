@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSolutions - Soluções Inovadoras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav-container">
+        <div class="logo">MSolutions</div>
+        <div class="nav-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#testemunhos">Testemunhos</a>
+        </div>
+        <button class="cta-button primary">
+          <a href="#contato">Entre em Contato</a>
+        </button>
+      </nav>
+    </header>
+
+    <div class="swiper hero-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <div class="slide-content">
+            <h1 class="slide-title">Soluções Inovadoras</h1>
+            <p class="text-xl mb-8">Transformando ideias em realidade</p>
+            <button class="cta-button secondary">Saiba Mais</button>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <div class="slide-content">
+            <h1 class="slide-title">Qualidade Garantida</h1>
+            <p class="text-xl mb-8">Excelência em cada projeto</p>
+            <button class="cta-button secondary">Conheça Mais</button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <section id="sobre" class="section">
+      <div class="section-container">
+        <div class="fade-up">
+          <h2 class="section-title">Sobre Nós</h2>
+          <p class="text-center max-w-2xl mx-auto text-gray-600">
+            Somos uma empresa comprometida com a inovação e excelência. Há mais
+            de 10 anos no mercado, oferecemos soluções personalizadas para
+            nossos clientes, sempre com foco em qualidade e resultados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="section-container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div id="services-container" class="services-grid">
+        </div>
+      </div>
+    </section>
+
+    <section id="testemunhos" class="section">
+      <div class="section-container">
+        <h2 class="section-title">Testemunhos</h2>
+        <div id="testimonials-container" class="testimonials-grid">
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="section-container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input
+              type="text"
+              id="name"
+              class="form-input"
+              placeholder="Nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              id="message"
+              class="form-input"
+              rows="4"
+              placeholder="Mensagem"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="cta-button primary w-full">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h3 class="text-xl font-bold mb-4">MSolutions</h3>
+          <p>Transformando o futuro através da inovação</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Links Úteis</h3>
+          <ul class="footer-links space-y-2">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="footer-links">Facebook</a>
+            <a href="#" class="footer-links">Twitter</a>
+            <a href="#" class="footer-links">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+      let swiper = new Swiper(".hero-slider", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      async function loadServices() {
+        try {
+          let services = [
+            {
+              title: "Desenvolvimento Web",
+              description: "Criação de sites modernos e responsivos",
+            },
+            {
+              title: "Marketing Digital",
+              description: "Estratégias para aumentar sua presença online",
+            },
+            {
+              title: "Consultoria",
+              description: "Soluções personalizadas para seu negócio",
+            },
+          ];
+
+          let container = document.getElementById("services-container");
+          services.forEach((service) => {
+            let serviceCard = document.createElement("div");
+            serviceCard.className = "service-card fade-up";
+            serviceCard.innerHTML = `
+                        <h3 class="text-xl font-bold mb-4">${service.title}</h3>
+                        <p class="text-gray-600">${service.description}</p>
+                    `;
+            container.appendChild(serviceCard);
+          });
+        } catch (error) {
+          let container = document.getElementById("services-container");
+          container.innerHTMLcontainer.innerHTML =
+            '<p class="text-red-600 text-center">Erro ao carregar os serviços. Tente novamente mais tarde.</p>';
+        }
+      }
+
+      async function loadTestimonials() {
+        try {
+          let testimonials = [
+            {
+              name: "João Silva",
+              photo: "Joao Silva.jpg",
+              text: "Excelente serviço! Superou todas as expectativas.",
+            },
+            {
+              name: "Maria Santos",
+              photo: "Maria Santos.jpg",
+              text: "Profissionais muito competentes e atenciosos.",
+            },
+            {
+              name: "Pedro Oliveira",
+              photo: "Pedro Oliveira.jpg",
+              text: "Resultados impressionantes em pouco tempo.",
+            },
+          ];
+
+          let container = document.getElementById("testimonials-container");
+          testimonials.forEach((testimonial) => {
+            let testimonialCard = document.createElement("div");
+            testimonialCard.className = "testimonial-card fade-up";
+            testimonialCard.innerHTML = `
+                        <img src="${testimonial.photo}" alt="${testimonial.name}" class="testimonial-image">
+                        <h4 class="text-lg font-bold mb-2">${testimonial.name}</h4>
+                        <p class="text-gray-600">${testimonial.text}</p>
+                    `;
+            container.appendChild(testimonialCard);
+          });
+        } catch (error) {
+          let container = document.getElementById("testimonials-container");
+          container.innerHTML =
+            '<p class="text-red-600 text-center">Erro ao carregar os testemunhos. Tente novamente mais tarde.</p>';
+        }
+      }
+
+      emailjs.init({ publicKey: "ke7F0kzlN8e4JqyL-" });
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let name = document.getElementById("name").value;
+          let email = document.getElementById("email").value;
+          let message = document.getElementById("message").value;
+
+          if (!name || !email || !message) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+          }
+
+          let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("Por favor, insira um email válido.");
+            return;
+          }
+
+          var templateParams = {
+            from_name: name,
+            reply_to: email,
+            message: message,
+          };
+
+          emailjs
+            .send("service_hnjluzh", "template_5kikrbr", templateParams)
+            .then(
+              (response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Mensagem enviada com sucesso!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+                alert("Erro ao enviar mensagem. Tente novamente mais tarde.");
+              }
+            );
+        });
+
+      function handleScrollAnimations() {
+        let elements = document.querySelectorAll(".fade-up");
+        elements.forEach((element) => {
+          let elementTop = element.getBoundingClientRect().top;
+          let windowHeight = window.innerHeight;
+          if (elementTop < windowHeight * 0.8) {
+            element.classList.add("active");
+          }
+        });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          let target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        loadServices();
+        loadTestimonials();
+        handleScrollAnimations();
+        window.addEventListener("scroll", handleScrollAnimations);
+      });
+    </script>
+  </body>
+</html>
