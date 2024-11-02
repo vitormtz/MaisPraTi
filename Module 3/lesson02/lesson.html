@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Simples</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      form input,
+      form select,
+      form button {
+        margin: 5px 0;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Bem-vindo ao Meu Site</h1>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>
+        Somos uma empresa dedicada a oferecer os melhores serviços para nossos
+        clientes. Com anos de experiência, garantimos qualidade e excelência.
+      </p>
+    </section>
+
+    <section id="servicos">
+      <h2>Nossos Serviços</h2>
+      <ul>
+        <li>Desenvolvimento Web</li>
+        <li>Design Gráfico</li>
+        <li>Marketing Digital</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tabela de Preços</h2>
+      <table>
+        <tr>
+          <th>Serviço</th>
+          <th>Preço</th>
+        </tr>
+        <tr>
+          <td>Desenvolvimento Web</td>
+          <td>R$ 1500</td>
+        </tr>
+        <tr>
+          <td>Design Gráfico</td>
+          <td>R$ 800</td>
+        </tr>
+        <tr>
+          <td>Marketing Digital</td>
+          <td>R$ 1200</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form action="#" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="servico">Serviço de Interesse:</label>
+        <select id="servico" name="servico">
+          <option value="web">Desenvolvimento Web</option>
+          <option value="design">Design Gráfico</option>
+          <option value="marketing">Marketing Digital</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
