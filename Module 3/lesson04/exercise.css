@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+}
+
+form {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(169, 248, 251);
+    padding: 10px;
+}
+
+.form-group,
+.form-group-checkbox {
+    margin: 5px;
+}
+
+.form-group input,
+textarea {
+    width: 200px;
+    height: 15px;
+    font-family: sans-serif;
+}
+
+.form-group #assunto {
+    width: 208px;
+    height: 21px;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group #assunto:focus {
+    border: 4px inset white;
+}
+
+.form-group #botao {
+    padding: 12px 82px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-group #botao:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-group #botao:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group #botao:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}

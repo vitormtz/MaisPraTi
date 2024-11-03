@@ -1,0 +1,140 @@
+<!--
+Formulário de Contato com Validação
+
+  Objetivo: Criar um formulário de contato, com validação.
+  Instruções :
+    Crie um formulário com os seguintes campos:
+      Nome (campo obrigatório)
+      E-mail (campo obrigatório e deve validar formato de e-mail)
+      Mensagem (campo obrigatório)
+      Telefone (campo opcional)
+      Assunto (campo de seleção com 3 opções: Dúvida, Suporte, Feedback)
+      Checkbox para aceitar os Termos de Uso (obrigatório)
+
+    Inclua um botão de envio que só deve ser habilitado se todos os campos obrigatórios forem preenchidos corretamente.
+    Adicione um placeholder para cada campo.
+
+    Utilize HTML5 para adicionar validação dos campos obrigatórios e padrões de validação (como o campo de e-mail e número de telefone).
+    
+
+    CSS - Estilização e Responsividade:
+
+  Estilização:    
+    Adicione uma borda ao redor do formulário com cantos arredondados.
+    Utilize espaçamento adequado entre os campos.
+    Altere a cor de fundo e o estilo da fonte.
+    Aplique foco (:focus) nos campos, destacando-os quando o usuário estiver interagindo com eles.
+    Estilize o botão de envio para parecer um botão moderno .com sombras, efeito hover, e animação suave quando pressionado).
+    Alinhe os rótulos (<label>) dos campos à esquerda e os inputs à direita, criando uma boa legibilidade.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="exercise.css" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="fnome">Nome:*</label><br />
+        <input
+          type="text"
+          id="fnome"
+          name="nome"
+          placeholder="Vitor Brackmann"
+          autofocus
+          required
+        /><br />
+      </div>
+
+      <div class="form-group">
+        <label for="femail">E-mail:*</label><br />
+        <input
+          type="email"
+          id="femail"
+          name="email"
+          placeholder="Vitor.brak@hotmail.com"
+          required
+        /><br />
+      </div>
+
+      <div class="form-group">
+        <label for="fmensagem">Mensagem:*</label><br />
+        <textarea
+          id="fmensagem"
+          name="mensagem"
+          placeholder="Escreva sua mensagem aqui"
+          required
+        ></textarea
+        ><br />
+      </div>
+
+      <div class="form-group">
+        <label for="ftelefone">Telefone:</label><br />
+        <input
+          type="tel"
+          id="ftelefone"
+          name="telefone"
+          min="11"
+          max="11"
+          pattern="(\(?[0-9]{2}\)?\s?)?9?[0-9]{4}-?[0-9]{4}"
+          placeholder="(xx) xxxxx-xxxx"
+        /><br />
+      </div>
+
+      <div class="form-group">
+        <label for="assunto">Assunto:</label><br />
+        <select form="fassunto" id="assunto" name="assunto" required>
+          <option value="duvida">Dúvida</option>
+          <option value="suporte">Suporte</option>
+          <option value="feedback">Feedback</option></select
+        ><br />
+      </div>
+
+      <div class="form-group-checkbox">
+        <input
+          type="checkbox"
+          id="ftermos"
+          name="termos"
+          value="true"
+          required
+        />
+        <label for="ftermos"> Eu aceito os termos de uso *</label><br />
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="botao" disabled>Enviar</button>
+      </div>
+    </form>
+  </body>
+
+  <script>
+    function verificarCampos() {
+      let nome = document.getElementById("fnome").value.trim();
+      let email = document.getElementById("femail").value.trim();
+      let mensagem = document.getElementById("fmensagem").value.trim();
+      let termos = document.getElementById("ftermos").checked;
+      let botao = document.getElementById("botao");
+
+      if (nome !== "" && email !== "" && mensagem !== "" && termos) {
+        botao.disabled = false;
+      } else {
+        botao.disabled = true;
+      }
+    }
+
+    document.getElementById("fnome").addEventListener("input", verificarCampos);
+    document
+      .getElementById("femail")
+      .addEventListener("input", verificarCampos);
+    document
+      .getElementById("fmensagem")
+      .addEventListener("input", verificarCampos);
+    document
+      .getElementById("ftermos")
+      .addEventListener("input", verificarCampos);
+  </script>
+</html>
