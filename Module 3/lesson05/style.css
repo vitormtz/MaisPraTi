@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #dee3e8;
+    color: hsl(0, 0%, 20%);
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.inline-label {
+    display: inline;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+fieldset {
+    border: none;
+    margin-top: 15px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #007bff;
+    background-color: #f1f1f1;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #166b99;
+}
+
+div {
+    border: 1px solid blue;
+}
+
+h3 {
+    border: 1px solid blue;
+}
+
+a {
+    border: 1px solid blue;
+}
+
+strong {
+    border: 1px solid blue;
+    display: inline-block;
+    height: 50px;
+    width: 120px;
+    border: 1px solid blue;
+}
+
+.container {
+    position: relative;
+    background-color: #ccc;
+    width: 800px;
+    margin: 20px auto;
+    border: 3px solid;
+    top: 10px;
+    left: 30px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background: yellow;
+}
+
+.relative {
+    position: relative;
+    top: 100px;
+}
+
+.absolute {
+    position: absolute;
+    border: 3px solid blue;
+    top: 30px;
+    right: 30px;
+    bottom: 100px;
+}
+
+
+.fixed {
+    /*position: fixed;*/
+    border: 2px solid blue;
+    top: 300px;
+    left: 10px;
+}
+
+main {
+    border: 3px solid blue;
+}
+
+.box {
+    border: 1px solid black;
+    width: 50%;
+}
+
+.em {
+    font-size: 1.5em;
+}
+
+#yoshi {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px;
+    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#img-circular {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px;
+    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+figure .foto-legenda {
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+    width: 40%;
+    height: 40%;
+}

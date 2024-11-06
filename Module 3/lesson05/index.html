@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulários</title>
+  </head>
+  <body>
+    <form>
+      <h1>Cadastro de Eventos</h1>
+
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" /><br />
+
+      <label for="email">E-mail:</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="vitor.brak@hotmail.com"
+      /><br />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" /><br />
+
+      <label for="confirme-senha">Confirme sua senha:</label>
+      <input type="password" id="confirme-senha" name="confirme-senha" />
+      <br />
+
+      <label for="data-nascimento">Data de nascimento:</label>
+      <input type="date" id="data-nascimento" name="data-nascimento" /><br />
+
+      <label for="genero">Gênero:</label>
+      <select name="genero" id="genero">
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Outros">Outros</option></select
+      ><br />
+
+      <fieldset>
+        <legend>Preferências de Comunicação</legend>
+        <input type="checkbox" id="email-novidades" name="email-novidades" />
+        <label class="inline-label" for="email-novidades"
+          >Receber atualizações por e-mail</label
+        ><br />
+
+        <input type="checkbox" id="sms-novidades" name="sms-novidades" />
+        <label class="inline-label" for="sms-novidades"
+          >Receber atualizações por SMS</label
+        ><br />
+      </fieldset>
+      <br />
+
+      <label for="foto-perfil">Foto de perfil:</label>
+      <input type="file" id="foto-perfil" name="foto-perfil" /><br />
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Tabela Simples</h2>
+    <table class="tabela-simples">
+      <tr>
+        <td class="coluna1">1,1</td>
+        <td class="coluna2">1,2</td>
+      </tr>
+      <tr>
+        <td class="coluna1">2,1</td>
+        <td class="coluna2">2,2</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <h2>Tabela com Cabeçalho e Legenda</h2>
+    <table class="tabela-clubes">
+      <caption>
+        Ranking de Clubes
+      </caption>
+      <thead>
+        <tr>
+          <th class="header-rank">Rank</th>
+          <th class="header-clube">Clube</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rank">1</td>
+          <td class="clube">Grêmio</td>
+        </tr>
+        <tr>
+          <td class="rank">2</td>
+          <td class="clube">Barcelona</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+
+    <h2>Tabela Técnica</h2>
+    <table id="tabela-tecnica">
+      <tbody>
+        <tr>
+          <td class="especificacao">Memória</td>
+          <td class="detalhe">16GB</td>
+        </tr>
+        <tr>
+          <td class="especificacao">Processador</td>
+          <td class="detalhe">Intel i7</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <h1>Inline, Block, Inline-Block</h1>
+      <h3>Teste</h3>
+      <a href="teste">Bilbo Bolseiro</a>
+      <strong>Grêmio</strong>
+    </div>
+    <br />
+
+    <div class="container">
+      <h4>Exemplos de posicionamento</h4>
+
+      <p class="sticky">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum saepe
+        labore quas esse placeat aliquam adipisci veritatis aut voluptatum
+        possimus. Culpa corrupti illum omnis pariatur exercitationem aliquam
+        recusandae consequatur enim.
+      </p>
+
+      <p class="relative">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+        obcaecati.
+      </p>
+
+      <p class="absolute">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        <span>Eu estive aqui.</span> Eius eveniet necessitatibus inventore hic
+        porro veniam iure asperiores quo, iste itaque!
+      </p>
+
+      <p class="fixed">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+        animi! Inventore culpa vero fugiat cumque iusto, tempora ut eius cum et
+        ea error quasi nulla necessitatibus accusantium similique mollitia
+        tenetur quas alias quam molestiae atque minima esse voluptatem.
+        Incidunt, fugiat?
+      </p>
+    </div>
+    <br />
+
+    <main>
+      <h1>Unidade de medida</h1>
+
+      <div class="box">Box teste</div>
+
+      <p class="em">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab alias aut
+        tenetur ullam, illo perferendis necessitatibus facere similique enim.
+        Doloremque nam a error provident reprehenderit aliquam laudantium ex
+        enim blanditiis!
+      </p>
+    </main>
+
+    <img id="yoshi" src="images/yoshi.png" alt="Yoshi, amigo do Mário" />
+
+    <img
+      id="img-circular"
+      src="https://via.placeholder.com/
+    600x400"
+      alt="Imagem de exemplo"
+    />
+
+    <figure>
+      <img
+        src="https://fanatical.imgix.net/product/original/3bafb04b-d266-4437-8567-a2499e6d5c3b.jpeg?auto=compress,format&w=870&fit=crop&h=489"
+        alt="Best game ever"
+        title="Magick"
+      />
+      <figcaption class="foto-legenda">Best game ever</figcaption>
+    </figure>
+  </body>
+</html>
